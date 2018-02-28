@@ -1,0 +1,8 @@
+get_bop bop
+get_bop bebop
+get_bop hardbop
+get_fusion fusion
+get_fusion rock
+get_modern modern
+get_modern contemporary
+get_modern new
