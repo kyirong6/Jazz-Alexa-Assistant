@@ -1,0 +1,22 @@
+{
+  "intents": [
+    {
+      "intent": "AMAZON.CancelIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "get_bop"
+    },
+    {
+      "intent": "get_fusion"
+    },
+    {
+      "intent": "get_modern"
+    }
+  ]
+}
