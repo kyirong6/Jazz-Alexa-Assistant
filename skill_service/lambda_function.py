@@ -78,6 +78,17 @@ def get_welcome_response():
         card_title, speech_output, reprompt_text, should_end_session))
 
 
+def get_help_response():
+    """ An intent to provide more information.
+    """
+    session_attributes = {}
+    card_title = "Extra"
+    speech_output = "Hello, i'm glad you asked for help. I can recommend you a jazz artist to listen to based on a era you tell me. So far, i am limited to bop, modern, and fusion. So, which era would you like?"
+    should_end_session = False
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, None, should_end_session))
+
+
 def handle_session_end_request():
     card_title = "Session Ended"
     speech_output = "Thanks for visiting Jazz Artist of the Day!"
@@ -160,7 +171,7 @@ def on_intent(intent_request, session):
     elif intent_name == "get_fusion":
         return get_fusion(intent, session)
     elif intent_name == "AMAZON.HelpIntent":
-        return get_welcome_response()
+        return get_help_response()
     elif intent_name == "AMAZON.CancelIntent" or intent_name == "AMAZON.StopIntent":
         return handle_session_end_request()
     else:
