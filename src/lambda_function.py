@@ -192,7 +192,7 @@ def lambda_handler(event, context):
     function.
     """
     if (event['session']['application']['applicationId'] !=
-            "amzn1.ask.skill.2721632b-abf5-43e4-b57b-fc466571aacf"):
+            "MY_APPLICATION_ID"):
        raise ValueError("Invalid Application ID")
 
     if event['session']['new']:
